@@ -1,0 +1,102 @@
+<div class="container-fluid banner">
+	<img ng-repeat="item in list" alt="" ng-src="{{item.img}}" ng-show="{{$index}} == showIndex">
+</div>
+<!-- 热门项目 -->
+<div class="hotitem container">
+	<div class="row">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-8 h-content">
+			<div class="row title">
+				<h2 class="col-lg-10">热门项目</h2>
+				<a ui-sref="column" class="col-lg-2">查看更多</a>
+			</div>
+			<div class="row main" ng-repeat="item in list" ng-show="hot=={{$index}}">
+				<a ui-sref="column" class="col-lg-4">
+					<img ng-src="{{item.img}}" alt="">
+				</a>
+				<div class="col-lg-6 m-r">
+					<h3>{{item.name}}</h3>
+					<p> {{item.fname}}</p>
+					<p class="intro">{{item.intro}}</p>
+					<p>
+					  <span class="glyphicon glyphicon-tags">&nbsp;{{item.type}}&nbsp;</span>
+					  <span class="glyphicon glyphicon-facetime-video"> &nbsp;影视推荐</span>
+					</p>
+                    <div class="progress">
+                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{item.plan}}%;">
+	                     <span class="sr-only">60% Complete</span>
+                      </div>
+                    </div>
+                    <div class="m-data">
+                    	<p class="m-data-1">{{item.plan}}% <span>进度</span></p>
+                    	<p  class="m-data-2"> $&nbsp;{{item.rprice}}&nbsp; <span>支持额度</span></p>
+                    	<p  class="m-data-3"> &nbsp;&nbsp;{{item.rprice}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    	<span>已支持人数</span></p>
+                    </div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-2 h-list">
+			<p ng-repeat="t in list" ng-click="isShow($index)" ng-class="{borderleft:$index == hot}">{{t.type}}</p>
+		</div>
+		<div class="col-lg-1"></div>
+	</div>
+</div>
+<!-- 热门项目结束 -->
+<!-- 卫视主推开始 -->
+<div class="container gweld">
+	<div class="row gweld-title">
+		<div class="col-lg-1"></div>
+		<div class="col-lg-8 g-t-l" >卫视主推</div>
+		<a class="col-lg-2 g-t-r">查看更多</a>
+		<div class="col-lg-1"></div>
+	</div>
+	<div class="row gweld-content">
+		<div class="row">
+			
+			<div class="col-lg-4 g-c-c" ng-repeat="content in list"
+			ng-hide="{{$index}}==3">
+			  <div class="g-c-box">
+				<a ui-sref="detail({id:content.id})" >
+					<img ng-src="{{content.img}}" alt="">
+				</a>
+                <div class="g-c-box-b">
+					    <h3>{{content.name}}</h3>
+						<p> {{content.fname}}</p>
+						<p class="intro">{{content.intro}}</p>
+						<p>
+						  <span class="glyphicon glyphicon-tags">&nbsp;{{content.type}}&nbsp;</span>
+						  <span class="glyphicon glyphicon-facetime-video"> &nbsp;影视推荐</span>
+						</p>
+	                    <div class="progress">
+	                      <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{content.plan}}%;">
+		                     <span class="sr-only">60% Complete</span>
+	                      </div>
+	                    </div>
+	                    <div class="m-data">
+	                    	<b class="m-data-1">{{content.plan}}% 
+	                    	  <p>进度</p>
+	                    	</b>
+	                    	<b  class="m-data-2"> {{content.rprice}}
+	                    	   <p>支持额度</p>
+	                    	</b>
+	                    </div>
+                  </div>
+                    
+               </div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 卫视主推结束 -->
+<!-- 合作单位start -->
+<div class="container partner">
+    <p>合作单位</p>
+	<div class="row">
+		<a  ng-repeat="item in partner" class="col-lg-2">
+			<img  ng-src="{{item.img}}" alt="">
+		</a>
+	</div>
+</div>

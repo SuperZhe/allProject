@@ -1,0 +1,11 @@
+/bower_components
+/config
+    config.jsÂ·ÓÉ
+/controller
+   homecontroller.js
+/view
+   home.html
+   home.less
+index.html
+index.min.css
+index.min.js

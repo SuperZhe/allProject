@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="qmgj">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.js"></script>
+</head>
+<body ng-controller="bodyCtrl">
+    <header>
+    <div class="container">
+    	<div class="row">
+    		<a ui-sref='home' class="col-lg-2 qmgj">
+    		  <span class="qm">全民</span>
+    		  <span class="gj">共进</span>
+    		</a>
+    		<a ui-sref='home' class="col-lg-1" ng-click="cbcFn(1)" ng-class="{active:showIndex == 1}">首页</a>
+    		<a ui-sref='column' class="col-lg-1" ng-click="cbcFn(2)" ng-class="{active:showIndex == 2}">节目专栏</a>
+    		<a ui-sref='circle' class="col-lg-1" ng-click="cbcFn(3)" ng-class="{active:showIndex == 3}">圈子</a>
+    		
+    		<label class="col-lg-4">
+    		     <span class="glyphicon glyphicon-search"></span>
+	    		<input  type="text"  placeholder="请输入您要搜索的内容">
+    		</label>
+    		<div class="col-lg-2 logsign">
+    			<a  ui-sref='login' >登录</a>
+    			<a  ui-sref='signin' >注册</a>
+    		</div>
+    	</div>
+    </div>
+    </header>
+   
+   
+	<div ui-view></div>
+	<footer> 
+	   <div class="container">
+	   	<div class="row">
+	   		<p class="col-lg-9">
+	   			<span>关于全民创造</span>
+	   			<span>全民创造用户协议</span>
+	   			<span>全民创造风险提示</span>
+	   			<span>联系我们</span>
+	   		</p>
+	   		<p class="col-lg-3">
+	   			全民制造 &copy;司文
+	   		</p>
+	   	</div>
+	   </div>
+	</footer>
+	<script src="app.js"></script>
+	<script src="controller/homecontroller.js"></script>
+	<script src="controller/columncontroller.js"></script>
+	<script src="controller/circlecontroller.js"></script>
+	<script src="controller/logincontroller.js"></script>
+	<script src="controller/signincontroller.js"></script>
+	<script src="controller/detailcontroller.js"></script>
+	<script src="controller/itemlistcontroller.js"></script>
+</body>
+</html>

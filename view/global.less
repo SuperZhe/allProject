@@ -1,0 +1,97 @@
+*{margin: 0; padding: 0; font-size: 12px; line-height:20px; -webkit-tap-highlight-color:transparent; -webkit-appearance:none; color:#828587}
+a, img {-webkit-touch-callout: none; }
+body{-webkit-overflow-scrolling:touch;}
+body::-webkit-scrollbar{width: 0px;}
+textarea::-webkit-scrollbar{width: 0px;}
+div::-webkit-scrollbar{width:0px;}
+a:focus,input:focus,div:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{display: block; border: none 0; width: 100%;}
+input,textarea{border: 0 none; display: block;}
+input[type=search] { -webkit-appearance: none; }
+::-webkit-search-cancel-button { -webkit-appearance: none; }
+::-webkit-search-results-button { -webkit-appearance: none; }
+.d-block{display: block;}
+.d-none{display: none;}
+.v-none{visibility: hidden;}
+/*文字和li重置*/
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+a{text-decoration: none;}
+li{list-style: none;}
+body{
+	padding-top: 81px;
+}
+header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	
+	.container{
+		height: 81px;
+
+		.row{
+			.qmgj{
+				text-align: center;
+				.qm{
+					color:#000;
+					font-size: 24px; 
+					font-weight: bold;
+					line-height: 81px;
+				}
+				.gj{
+					color: #ff4200;
+					font-size: 24px;
+					font-weight: bold;
+                    line-height: 81px;
+				}
+			}
+			a{
+				text-align: center;
+				font-size: 14px;
+				color: #828291;
+				line-height: 81px;
+			}
+			label{
+				border-left: 1px solid #828291;line-height: 81px;
+				span{font-size: 20px;color: #828291;line-height: 81px;}
+				input{
+					display: inline-block;
+					vertical-align: top;
+					width: 80%;
+					line-height: 24px;
+					margin-top: 30px;
+				}
+			}
+			.logsign{
+				padding: 0;
+				text-align: right;
+				a{
+					color:#ff4200;
+					margin: 10px;
+					line-height: 81px;
+
+				 }
+			}
+		}
+	}
+	
+}
+footer{
+	width: 100%;
+	background-color:#150b09;
+	height: 81px;
+	.container{
+		.row{
+			p{
+				color:#828587;
+				line-height: 81px;
+				span{
+                   color:#828587;
+                   border-right: 1px solid #828587;
+                   padding:0px 5px;
+				}
+			}
+		}
+	}
+}
+.active{background: #ff4200}

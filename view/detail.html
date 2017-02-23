@@ -1,0 +1,32 @@
+<div class="container detailtop">
+	<div class="row title">
+		<div class="col-lg-12">
+			<div class="title-top" ng-bind="item.title"></div>
+			<div class="title-bottom" ng-bind="item.by"></div>
+		</div>
+	</div>
+	<div class="row main">
+	   <img ng-src="{{item.imgSrc}}" alt="" class="col-lg-8">
+	   <div class="col-lg-4">
+		   	<div>
+		   		<p ng-bind="item.people"></p>
+		   		<p>支持者</p>
+		   	</div>
+		   	<div>
+		   		<p ng-bind="money"></p>
+		   		<p>支持金额 <span>总金额{{item.allmoney}}</span></p>
+		   	</div>
+		   	<div>
+		   		<p ng-bind="item.days"></p>
+		   		<p>剩余天数</p>
+		   	</div>
+		   	<div>
+		   		<span>众筹中</span>
+		   		 <span class="glyphicon glyphicon-facetime-video"></span>
+		   		 <a href="#">分享到圈子</a>
+		   	</div>
+		   	<div ng-bind="item.time"></div>
+	   </div>
+		
+	</div>
+</div>
